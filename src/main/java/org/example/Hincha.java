@@ -33,6 +33,9 @@ public abstract class Hincha {
         return descuentoPorFecha;
     }
 
+
+    public abstract void showInfo();
+
     public Hincha() {
     }
 

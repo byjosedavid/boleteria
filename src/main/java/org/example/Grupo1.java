@@ -12,6 +12,9 @@ public class Grupo1 extends Hincha {
     private Double valorIva;
     private Double valorNeto;
 
+    public Grupo1(LocalDate of) {
+    }
+
 
     @Override
     public Double calcularValorBruto(Integer cantidad) {
@@ -44,14 +47,32 @@ public class Grupo1 extends Hincha {
     @Override
     public Double calcValorNeto() {
         this.valorNeto = this.valorBruto - this.valorDescuentoTribuna - this.valorDescuentoFecha + this.valorIva;
-        System.out.println("El valor total es: " + this.valorNeto);
         return valorNeto;
     }
+
+    @Override
+    public void showInfo() {
+        System.out.println();
+        System.out.println(" El nombre del comprador es: " + getNombre());
+        System.out.println(" El id del comprador es: " + getId());
+        System.out.println(" El email del comprador es: " + getEmail());
+        System.out.println(" El grupo del comprador es: " + getGrupo());
+        System.out.println(" La fecha de compra es: " + getFechaCompra());
+        System.out.println(" El valor total es: " + this.valorNeto);
+    }
+
+    public Double getValorNeto() {
+        return valorNeto;
+    }
+
 
     public Grupo1() {
     }
 
+
     public Grupo1(String nombre, String email, Integer id, String grupo, LocalDate fechaCompra) {
         super(nombre, email, id, grupo, fechaCompra);
     }
+
+
 }
