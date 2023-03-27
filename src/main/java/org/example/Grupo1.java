@@ -12,10 +12,6 @@ public class Grupo1 extends Hincha {
     private Double valorIva;
     private Double valorNeto;
 
-    public Grupo1(LocalDate of) {
-    }
-
-
     @Override
     public Double calcularValorBruto(Integer cantidad) {
         if (cantidad > 1) {
